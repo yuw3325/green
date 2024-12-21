@@ -1,11 +1,11 @@
-name: cecfrewaxp
+name: yuw3325
 
 on:
   push:
     branches:
       - main
   schedule:
-  - cron: "0 0 * * *"
+  - cron: "1,3,4,7 * * *"
 
 jobs:
   autogreen:
@@ -20,8 +20,8 @@ jobs:
 
       - name: Auto green
         run: |
-          git config --local user.email "365562422@qq.com"
-          git config --local user.name "cecfrewaxp"
+          git config --local user.email "yuw43900@gmail.com"
+          git config --local user.name "yuw3325"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git pull --rebase
           git commit --allow-empty -m "a commit a day keeps your girlfriend away"
